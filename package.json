@@ -1,0 +1,19 @@
+{
+  "name": "next-email",
+  "version": "1.0.0",
+  "description": "TBD",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenshun/next-email.git"
+  },
+  "author": "Sean Connolly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goldenshun/next-email/issues"
+  },
+  "homepage": "https://github.com/goldenshun/next-email#readme"
+}
