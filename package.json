@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goldenshun/next-email.git"
+    "url": "git+https://github.com/goldenshun/nextmail.git"
   },
   "author": "Sean Connolly",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/goldenshun/next-email/issues"
+    "url": "https://github.com/goldenshun/nextmail/issues"
   },
-  "homepage": "https://github.com/goldenshun/next-email#readme"
+  "homepage": "https://github.com/goldenshun/nextmail#readme"
 }
