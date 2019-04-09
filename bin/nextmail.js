@@ -1,6 +1,10 @@
 #!/usr/bin/env node
-// const nextmailDev = require('../cli/nextmail-dev');
-// nextmailDev();
+const argv = require('yargs').argv;
 
-const nextmailBuild = require('../cli/nextmail-build');
-nextmailBuild();
+const command = argv._[0];
+
+if (command === 'build') {
+  require('../cli/nextmail-build')();
+} else {
+  require('../cli/nextmail-dev')();
+}
