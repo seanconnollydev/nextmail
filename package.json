@@ -27,6 +27,7 @@
     "@babel/core": "7.4.3",
     "@babel/plugin-transform-runtime": "7.4.3",
     "@babel/preset-env": "7.4.3",
-    "@babel/preset-react": "7.0.0"
+    "@babel/preset-react": "7.0.0",
+    "require-context": "1.1.0"
   }
 }
