@@ -11,7 +11,9 @@ import {
   MjmlRaw,
 } from 'mjml-react';
 
-function Demo() {
+function Demo(props) {
+  const { firstName } = props;
+
   return (
     <Mjml>
       <MjmlHead>
@@ -20,7 +22,7 @@ function Demo() {
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
-            <MjmlText align="center">Such a small template.</MjmlText>
+            <MjmlText align="center">Hello { firstName }</MjmlText>
             <MjmlRaw>
               <div>But its ok</div>
             </MjmlRaw>
