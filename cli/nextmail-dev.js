@@ -1,5 +1,6 @@
+const startServer = require('../lib/startServer');
 function nextmailDev() {
-  console.log('dev!');
+  startServer();
 }
 
 module.exports = nextmailDev;

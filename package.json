@@ -31,6 +31,7 @@
     "@babel/runtime": "7.4.3",
     "mjml": "4.4.0-beta.1",
     "mjml-react": "1.0.52",
+    "path-to-regexp": "3.0.0",
     "require-context": "1.1.0",
     "yargs": "13.2.2"
   },

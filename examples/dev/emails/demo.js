@@ -23,9 +23,6 @@ function Demo(props) {
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
             <MjmlText align="center">Hello { firstName }</MjmlText>
-            <MjmlRaw>
-              <div>But its ok</div>
-            </MjmlRaw>
           </MjmlColumn>
         </MjmlSection>
       </MjmlBody>

@@ -2,6 +2,7 @@
   "name": "dev",
   "version": "1.0.0",
   "scripts": {
+    "build": "nextmail build",
     "dev": "nextmail dev"
   },
   "license": "MIT",
