@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/goldenshun/nextmail/issues"
   },
-  "homepage": "https://github.com/goldenshun/nextmail#readme"
+  "homepage": "https://github.com/goldenshun/nextmail#readme",
+  "dependencies": {
+    "@babel/core": "7.4.3",
+    "@babel/plugin-transform-runtime": "7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "@babel/preset-react": "7.0.0"
+  }
 }
