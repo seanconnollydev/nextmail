@@ -6,6 +6,10 @@
   "scripts": {
     "test": "test"
   },
+  "peerDependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goldenshun/nextmail.git"
