@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "TBD",
   "main": "index.js",
+  "bin": {
+    "nextmail": "./bin/nextmail.js"
+  },
   "scripts": {
     "test": "test"
   },

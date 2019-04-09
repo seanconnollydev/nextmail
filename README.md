@@ -26,7 +26,7 @@ Populate `./emails/demo.js` inside your project:
 
 ```jsx
 function Demo() {
-  return <div>Welcome to NextMail</div>
+  return <div>Welcome to Nextmail!</div>
 }
 
 export default Demo
