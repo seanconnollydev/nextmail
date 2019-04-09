@@ -7,7 +7,8 @@ import {
   MjmlBody,
   MjmlSection,
   MjmlColumn,
-  MjmlText
+  MjmlText,
+  MjmlRaw,
 } from 'mjml-react';
 
 function Demo() {
@@ -20,6 +21,9 @@ function Demo() {
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
             <MjmlText align="center">Such a small template.</MjmlText>
+            <MjmlRaw>
+              <div>But its ok</div>
+            </MjmlRaw>
           </MjmlColumn>
         </MjmlSection>
       </MjmlBody>
