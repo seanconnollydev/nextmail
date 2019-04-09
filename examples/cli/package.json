@@ -1,8 +1,9 @@
 {
-  "name": "demo",
+  "name": "cli",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nextmail dev"
+    "build": "nextmail build",
+    "gen": "node index.js"
   },
   "license": "MIT",
   "dependencies": {
