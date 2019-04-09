@@ -1,3 +1,3 @@
 const { renderEmail } = require('nextmail');
 
-console.log('renderEmail', renderEmail('abc'));
+console.log('renderEmail', renderEmail('demo'));
