@@ -29,6 +29,7 @@
     "@babel/preset-env": "7.4.3",
     "@babel/preset-react": "7.0.0",
     "@babel/runtime": "7.4.3",
+    "html-to-text": "5.1.1",
     "mjml": "4.4.0-beta.1",
     "mjml-react": "1.0.52",
     "path-to-regexp": "3.0.0",
