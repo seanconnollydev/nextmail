@@ -1,4 +1,5 @@
-const startServer = require('../lib/startServer');
+const startServer = require('../server/startServer');
+
 function nextmailDev() {
   startServer();
 }
