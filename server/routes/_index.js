@@ -29,7 +29,7 @@ const index = {
             }
 
             .email {
-              margin: 1.2rem 0;
+              margin: 0.8rem 0;
             }
           </style>
         </head>
