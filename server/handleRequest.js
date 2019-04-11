@@ -2,6 +2,7 @@ const http = require('http');
 const { findRoute } = require('./routes');
 
 const handleRequest = async (req, res) => {
+  console.log('handleRequest', req.url);
   const route = findRoute(req.method.toLowerCase(), req.url.toLowerCase());
 
   if (route) {
