@@ -1,7 +1,5 @@
-const asPackage = require('./lib/asPackage');
-const renderEmail = require('./lib/renderEmail');
+const Renderer = require('./lib/Renderer');
 
 module.exports = {
-  asPackage,
-  renderEmail,
+  Renderer,
 };

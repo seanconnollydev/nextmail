@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 const path = require('path');
-const { renderEmail } = require('nextmail');
+const { Renderer } = require('nextmail');
+
+const pathPrefix = path.resolve(__dirname);
+const renderer = new Renderer({ pathPrefix });
 
 (async () => {
-  const pathPrefix = path.resolve(__dirname);
-  console.log('renderEmail', await renderEmail('demo', { firstName: 'John' }, { pathPrefix }));
+  console.log('renderEmail', await renderer.renderEmail('demo', { firstName: 'John' }));
 })();

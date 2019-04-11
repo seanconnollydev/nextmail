@@ -1,5 +1,7 @@
 const { buildTemplate } = require('../../lib/build');
-const renderEmail = require('../../lib/renderEmail');
+const Renderer = require('../../lib/Renderer');
+
+const renderer = new Renderer();
 
 const preview = {
   method: 'get',
@@ -7,7 +9,7 @@ const preview = {
   handler: async (req, res, params) => {
     console.log('preview', params.template);
     await buildTemplate(params.template);
-    const { html, text } = await renderEmail(params.template, {});
+    const { html, text } = await renderer.renderEmail(params.template, {});
 
     if (params.format === 'text') {
       return handleText(res, text);
