@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const argv = require('yargs').argv;
+const { argv } = require('yargs');
 
 const command = argv._[0];
 

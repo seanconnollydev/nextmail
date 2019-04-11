@@ -12,9 +12,9 @@ const handleRequest = async (req, res) => {
   handle404(res);
 };
 
-const handle404 = (res) => {
-  res.writeHead(404, {'Content-Type': 'text/html'});
-  res.write("404 Not Found\n");
+function handle404(res) {
+  res.writeHead(404, { 'Content-Type': 'text/html' });
+  res.write('404 Not Found\n');
   res.end();
 }
 

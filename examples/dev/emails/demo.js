@@ -22,7 +22,10 @@ function Demo(props) {
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
-            <MjmlText align="center">Hello { firstName }</MjmlText>
+            <MjmlText align="center">
+Hello
+              { firstName }
+            </MjmlText>
           </MjmlColumn>
         </MjmlSection>
       </MjmlBody>

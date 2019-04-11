@@ -7,6 +7,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "mjml": "4.4.0-beta.1",
+    "mjml-react": "1.0.52",
     "nextmail": "../..",
     "react": "16.8.6",
     "react-dom": "16.8.6"

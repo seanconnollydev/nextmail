@@ -14,17 +14,17 @@ const preview = {
     }
 
     return handleHtml(res, html);
-  }
-}
+  },
+};
 
-const handleText = (res, text) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
+function handleText(res, text) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.write(text);
   res.end();
 }
 
-const handleHtml = (res, html) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
+function handleHtml(res, html) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write(html);
   res.end();
 }
