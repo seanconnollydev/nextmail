@@ -9,7 +9,7 @@ import {
   MjmlColumn,
   MjmlText,
   MjmlRaw,
-} from 'mjml-react';
+} from 'nextmail/mjml-react';
 
 function Demo(props) {
   const { firstName } = props;
