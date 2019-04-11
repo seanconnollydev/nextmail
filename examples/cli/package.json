@@ -5,6 +5,9 @@
     "build": "nextmail build",
     "gen": "node index.js"
   },
+  "bin": {
+    "nextmail-cli": "index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "nextmail": "../..",
