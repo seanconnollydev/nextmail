@@ -8,7 +8,6 @@ import {
   MjmlSection,
   MjmlColumn,
   MjmlText,
-  MjmlRaw,
 } from 'mjml-react';
 
 function NestedDemo() {

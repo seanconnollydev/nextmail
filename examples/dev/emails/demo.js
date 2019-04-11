@@ -8,7 +8,6 @@ import {
   MjmlSection,
   MjmlColumn,
   MjmlText,
-  MjmlRaw,
 } from 'mjml-react';
 
 function Demo(props) {
@@ -23,8 +22,7 @@ function Demo(props) {
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
             <MjmlText align="center">
-Hello
-              { firstName }
+              {`Hello ${firstName}`}
             </MjmlText>
           </MjmlColumn>
         </MjmlSection>

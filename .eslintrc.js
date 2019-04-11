@@ -15,6 +15,7 @@ module.exports = {
     }],
     'no-underscore-dangle': 'off',
     'no-use-before-define': ['error', { functions: false, classes: false }],
-    'react/jsx-filename-extension': 'off'
+    'react/jsx-filename-extension': 'off',
+    'react/prop-types': 'off'
   },
 };

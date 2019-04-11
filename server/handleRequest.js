@@ -1,4 +1,3 @@
-const http = require('http');
 const { findRoute } = require('./routes/routes');
 
 const handleRequest = async (req, res) => {
@@ -6,10 +5,10 @@ const handleRequest = async (req, res) => {
   const route = findRoute(req.method.toLowerCase(), req.url.toLowerCase());
 
   if (route) {
-    return await route.handler(req, res, route.params);
+    return route.handler(req, res, route.params);
   }
 
-  handle404(res);
+  return handle404(res);
 };
 
 function handle404(res) {
