@@ -3,7 +3,7 @@ const renderEmail = require('../../lib/renderEmail');
 
 const preview = {
   method: 'get',
-  url: '/preview/:format/:template',
+  url: '/preview/:format/*template',
   handler: async (req, res, params) => {
     console.log('preview', params.template);
     await buildTemplate(params.template);

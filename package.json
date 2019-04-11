@@ -37,6 +37,13 @@
     "yargs": "13.2.2"
   },
   "devDependencies": {
+    "eslint": "5.5.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-cypress": "2.2.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "21.17.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   }
