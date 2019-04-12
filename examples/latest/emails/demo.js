@@ -32,4 +32,10 @@ function Demo(props) {
   );
 }
 
+
+Demo.getSubject = async ({ props }) => {
+  const { firstName } = props;
+  return `${firstName}, read this email!`;
+};
+
 export default Demo;

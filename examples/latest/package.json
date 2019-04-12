@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "nextmail build",
-    "dev": "nextmail dev"
+    "dev": "nextmail dev",
+    "gen": "node index.js"
   },
   "license": "MIT",
   "dependencies": {
