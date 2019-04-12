@@ -48,4 +48,33 @@ export default Demo;
 
 ```
 
-and then just run `npm run dev` and go to `http://localhost:6100`.
+and then just run `npm run dev` and go to `http://localhost:6100` to view a preview.
+
+## API
+
+### `Renderer`
+
+```
+const renderer = new Renderer();
+const { html, text, subject } = renderEmail('demo', {});
+```
+
+*Arguments*
+- *template* (string): The name of the email template.
+- *payload* (Object): Any dynamic data you need to interpolate in the email template (e.g. a user's name).
+
+*Returns*
+An `Object` with the following properties:
+- *html* (string): The fully rendered html.
+- *text* (string): The converted text of the email. `nextmail` uses [html-to-text](https://www.npmjs.com/package/html-to-text) for this conversion.
+- *subject* (string): The fully rendered subject line.
+
+## Previews
+
+The `nextmail dev` script allows you to view a preview of your email template.
+
+The preview route follows this format: `/preview/:format/:template`
+- `format` can be either `html` or `text`
+- `template` is the file path for your template, e.g. if your file is found at `./emails/demo.js`, the `template` would be `demo`
+
+##
