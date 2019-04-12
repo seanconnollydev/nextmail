@@ -1,7 +1,8 @@
+const debug = require('../lib/debug');
 const { findRoute } = require('./routes/routes');
 
 const handleRequest = async (req, res) => {
-  console.log('handleRequest', req.url);
+  debug('handleRequest: %s', req.url);
   const route = findRoute(req.method.toLowerCase(), req.url.toLowerCase());
 
   if (route) {

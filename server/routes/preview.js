@@ -1,5 +1,6 @@
 const url = require('url');
 const qs = require('qs');
+const debug = require('../../lib/debug');
 const Renderer = require('../../lib/Renderer');
 
 const renderer = new Renderer();
@@ -8,12 +9,10 @@ const preview = {
   method: 'get',
   url: '/preview/:format/*template',
   handler: async (req, res, params) => {
-    console.log('preview', params.template);
-
     const { query } = url.parse(req.url);
-    console.log('query', query);
+    debug('query: %o:', query);
     const payload = qs.parse(query);
-    console.log('payload', payload);
+    debug('payload: %o:', payload);
 
     const { html, text } = await renderer.renderEmail(params.template, payload);
 
