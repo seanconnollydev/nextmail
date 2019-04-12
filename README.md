@@ -48,4 +48,4 @@ export default Demo;
 
 ```
 
-and then just run `npm run dev` and go to `http://localhost:3000`.
+and then just run `npm run dev` and go to `http://localhost:6100`.
