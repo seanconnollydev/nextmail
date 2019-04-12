@@ -39,6 +39,10 @@
     "route-parser": "0.0.5",
     "yargs": "13.2.2"
   },
+  "peerDependencies": {
+    "react": "16.0.0^",
+    "react-dom": "16.0.0^"
+  },
   "devDependencies": {
     "eslint": "5.5.0",
     "eslint-config-airbnb": "17.1.0",
