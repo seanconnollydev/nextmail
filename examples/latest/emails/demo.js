@@ -34,13 +34,13 @@ function Demo(props) {
 }
 
 Demo.getInitialProps = async ({ payload }) => {
-  const { userId = 1 } = payload;
-  const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
+  const { userId } = payload;
+  const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId || 1}`);
   return { user: resp.data };
 };
 
 Demo.getSubject = async ({ payload, props }) => {
-  const { userId = 1 } = payload;
+  const { userId } = payload;
   const { user } = props;
 
   return `${user.name}(${userId}), read this email!`;
