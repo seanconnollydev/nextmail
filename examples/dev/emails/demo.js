@@ -8,7 +8,7 @@ import {
   MjmlColumn,
   MjmlText,
 } from 'nextmail/mjml-react';
-import Header from '../components/Header';
+import Header from './src/components/Header';
 
 function Demo(props) {
   const { firstName } = props;
@@ -16,7 +16,7 @@ function Demo(props) {
   return (
     <Mjml>
       <MjmlHead>
-        <MjmlTitle>Last Minute Offer</MjmlTitle>
+        <MjmlTitle>Las Minute Offer</MjmlTitle>
       </MjmlHead>
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">

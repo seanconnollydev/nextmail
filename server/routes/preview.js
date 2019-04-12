@@ -1,4 +1,3 @@
-const { buildTemplate } = require('../../lib/build');
 const Renderer = require('../../lib/Renderer');
 
 const renderer = new Renderer();
@@ -8,7 +7,6 @@ const preview = {
   url: '/preview/:format/*template',
   handler: async (req, res, params) => {
     console.log('preview', params.template);
-    await buildTemplate(params.template);
     const { html, text } = await renderer.renderEmail(params.template, {});
 
     if (params.format === 'text') {

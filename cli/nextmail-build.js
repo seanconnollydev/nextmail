@@ -1,7 +1,7 @@
-const { buildAll } = require('../lib/build');
+const { build } = require('../lib/build');
 
 async function nextmailBuild() {
-  await buildAll();
+  await build();
 }
 
 module.exports = nextmailBuild;

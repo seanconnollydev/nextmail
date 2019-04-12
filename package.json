@@ -27,6 +27,7 @@
     "@babel/preset-react": "7.0.0",
     "@babel/runtime": "7.4.3",
     "common-tags": "1.8.0",
+    "decache": "4.5.1",
     "html-to-text": "5.1.1",
     "mjml": "4.4.0-beta.1",
     "mjml-react": "1.0.52",
