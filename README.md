@@ -90,6 +90,8 @@ module.exports = { renderEmail };
 
 In similar fashion to [Next.js](https://nextjs.org), you can implement `getInitialProps` to asynchronously fetch data at render time.
 
+*Be careful* with this functionality. In many systems, emails are sent asynchronously. The underlying data store can change from when the email was triggered to when it is rendered. If you need the data to be locked in when the email is triggered, be sure that makes its way into the `payload`. If you are okay with using data that is later updated (e.g. the user changes their name), you can use `getInitialProps`.
+
 ```
 function Demo() {
   ...
