@@ -86,6 +86,39 @@ async function renderEmail(...args) {
 module.exports = { renderEmail };
 ```
 
+## Fetch asynchronous data with `getInitialProps`
+
+In similar fashion to [Next.js](https://nextjs.org), you can implement `getInitialProps` to asynchronously fetch data at render time.
+
+```
+function Demo() {
+  ...
+}
+
+// payload = { userId: 1 }
+Demo.getInitialProps = async ({ payload }) => {
+  const { userId } = payload;
+  const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
+  return { user: resp.data };
+};
+```
+
+## Render email subjects with `getSubject`
+
+Implement `getSubject` to hydrate the `subject` of the response to `renderEmail`. `getSubject` is called after `getInitialProps` and will have access to the initial props.
+
+```
+function Demo() {
+  ...
+}
+
+// props = { user: { name: 'Leanne Graham' } }
+Demo.getSubject = async ({ props }) => {
+  const { user } = props;
+  return `${user.name}! Act now!`; // Leanne Graham! Act now!
+}
+```
+
 ## Previews
 
 The `nextmail dev` script allows you to view a preview of your email template.
