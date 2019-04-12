@@ -1,6 +1,6 @@
 {
   "name": "nextmail",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Craft emails in React and MJML. Inspired by Next.js.",
   "keywords": "react, nextjs, email, mjml",
   "main": "index.js",
