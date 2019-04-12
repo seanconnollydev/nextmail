@@ -1,7 +1,7 @@
 {
   "name": "nextmail",
   "version": "0.2.0",
-  "description": "TBD",
+  "description": "Craft emails in React and MJML. Inspired by Next.js.",
   "main": "index.js",
   "bin": {
     "nextmail": "./bin/nextmail.js"
