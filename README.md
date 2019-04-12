@@ -69,6 +69,23 @@ An `Object` with the following properties:
 - *text* (string): The converted text of the email. `nextmail` uses [html-to-text](https://www.npmjs.com/package/html-to-text) for this conversion.
 - *subject* (string): The fully rendered subject line.
 
+#### Exporting `nextmail` templates as a package
+
+You can build and export email templates as an `npm` package. In order to do this, you need to tell `nextmail` where to find the build templates with the `pathPrefix` option.
+```
+const path = require('path');
+const { Renderer } = require('nextmail');
+
+const renderer = new Renderer({ pathPrefix: path.resolve(__dirname) });
+
+async function renderEmail(...args) {
+  // You can also implement custom post-processing logic here too.
+  return renderer.renderEmail(...args);
+}
+
+module.exports = { renderEmail };
+```
+
 ## Previews
 
 The `nextmail dev` script allows you to view a preview of your email template.
