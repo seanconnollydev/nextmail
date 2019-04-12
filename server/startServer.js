@@ -1,5 +1,5 @@
 const http = require('http');
-const { buildWatch } = require('../lib/execa');
+const { buildWatch } = require('../lib/build');
 const handleRequest = require('./handleRequest');
 
 const startServer = async () => {

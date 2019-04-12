@@ -8,7 +8,7 @@ import {
   MjmlColumn,
   MjmlText,
 } from 'nextmail/mjml-react';
-import Header from '../components/Header';
+import Header from './src/components/Header';
 
 function Demo(props) {
   const { firstName } = props;
