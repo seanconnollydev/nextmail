@@ -1,3 +1,12 @@
+`Nextmail` is a framework that makes it easy to leverage `React` and `MJML` to construct custom, dynamic email templates.
+
+- Declarative, component-based model with [React](https://reactjs.org/)
+- Responsive out of the box with [MJML](https://mjml.io/)
+- Iterate quickly with browser previews
+- Unit test with `jest` or however you choose, the same way you test your front end
+- Fetch asynchronous data with `getInitialProps`, inspired by [Next.js](https://nextjs.org/)
+- File based API, inspired by the `pages` model in [Next.js](https://nextjs.org/)
+
 ## How to use
 
 ### Setup
@@ -120,6 +129,21 @@ Demo.getSubject = async ({ props }) => {
   return `${user.name}! Act now!`; // Leanne Graham! Act now!
 }
 ```
+
+## Custom components
+
+Custom `React` components allow you to implement reusable elements in your email templates. Since `Nextmail` is compiling emails in your `emails` directory, you need to place your components in a special directory called `src`.
+```
+/emails
+  /src
+    Header.js <---- This will compile
+  demo.js
+  /other
+    NotCompiled.js <---- This will not
+```
+
+*Q*: Why not just include `Header.js` inside the `emails` directory?
+*A*: `Nextmail` needs the ability to distinguish email templates from other components. For example, the preview index lists all available email templates to preview.
 
 ## Previews
 
