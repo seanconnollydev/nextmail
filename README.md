@@ -22,9 +22,8 @@ and add a script to your package.json like this:
 ```json
 {
   "scripts": {
-    "dev": "nextmail",
-    "build": "nextmail build",
-    "start": "nextmail start"
+    "dev": "nextmail dev",
+    "build": "nextmail build"
   }
 }
 ```
