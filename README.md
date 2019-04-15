@@ -79,12 +79,12 @@ An `Object` with the following properties:
 
 #### Exporting `nextmail` templates as a package
 
-You can build and export email templates as an `npm` package. In order to do this, you need to tell `nextmail` where to find the build templates with the `pathPrefix` option.
+You can build and export email templates as an `npm` package. In order to do this, you need to tell `nextmail` where to find the build templates with the `rootDirectory` option.
 ```javascript
 const path = require('path');
 const { Renderer } = require('nextmail');
 
-const renderer = new Renderer({ pathPrefix: path.resolve(__dirname) });
+const renderer = new Renderer({ rootDirectory: path.resolve(__dirname) });
 
 async function renderEmail(...args) {
   // You can also implement custom post-processing logic here too.

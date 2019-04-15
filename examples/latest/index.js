@@ -2,8 +2,8 @@
 const path = require('path');
 const { Renderer } = require('nextmail');
 
-const pathPrefix = path.resolve(__dirname);
-const renderer = new Renderer({ pathPrefix });
+const rootDirectory = path.resolve(__dirname);
+const renderer = new Renderer({ rootDirectory });
 
 (async () => {
   // Sample data will come from here: https://jsonplaceholder.typicode.com/users/1
