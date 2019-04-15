@@ -1,4 +1,4 @@
-**Nextmail** makes it easy to leverage `React` and `MJML` to construct custom, dynamic email templates.
+**Nextmail** makes it easy to leverage `React` and `MJML` to craft custom, dynamic email templates.
 
 - Declarative, component-based model with [React](https://reactjs.org/)
 - Responsive out of the box with [MJML](https://mjml.io/)
@@ -164,7 +164,7 @@ Add static assets to the `/static` directory:
 
 Then you can reference them in your components:
 ```
-  <MjmlImage src="/static/bicycle.jpeg" />
+<MjmlImage src="/static/bicycle.jpeg" />
 ```
 
 For production, you will need to publish your assets to a known host and use absolute URLs in your components. To do this, add a `nextmail.config.js` file in your project's root:
