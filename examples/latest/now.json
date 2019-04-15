@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "nextmail-latest",
+  "alias": "nextmail-latest",
+  "builds": [
+    { "src": "./static/**", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "static/$1" }
+  ]
+}
