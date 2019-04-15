@@ -1,8 +1,6 @@
-const { buildWatch } = require('../lib/build');
 const startServer = require('../server/startServer');
 
-async function nextmailDev() {
-  await buildWatch();
+function nextmailDev() {
   startServer();
 }
 

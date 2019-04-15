@@ -1,9 +1,8 @@
 const http = require('http');
-const { buildWatch } = require('../lib/build');
+
 const handleRequest = require('./handleRequest');
 
 const startServer = async () => {
-  await buildWatch();
   const server = http.createServer(handleRequest);
 
   await new Promise((resolve, reject) => {

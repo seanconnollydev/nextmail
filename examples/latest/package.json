@@ -4,7 +4,8 @@
   "scripts": {
     "build": "nextmail build",
     "dev": "nextmail dev",
-    "gen": "node index.js"
+    "gen": "node index.js",
+    "start": "NODE_ENV=production nextmail start"
   },
   "license": "MIT",
   "dependencies": {
