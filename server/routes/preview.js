@@ -9,8 +9,9 @@ const preview = {
   method: 'get',
   url: '/preview/:format/*template',
   handler: async (req, res, params) => {
+    debug('/preview url: %o:', req.url);
     const { query } = url.parse(req.url);
-    debug('query: %o:', query);
+
     const payload = qs.parse(query);
     debug('payload: %o:', payload);
 

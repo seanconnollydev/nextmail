@@ -1,8 +1,9 @@
 const Route = require('route-parser');
 const index = require('./_index');
+const staticRoute = require('./static');
 const preview = require('./preview');
 
-const routes = [preview, index].map(rt => Object.assign({}, rt, {
+const routes = [staticRoute, preview, index].map(rt => Object.assign({}, rt, {
   url: new Route(rt.url),
 }));
 

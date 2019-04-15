@@ -17,7 +17,7 @@ function Demo(props) {
   return (
     <Mjml>
       <MjmlHead>
-        <MjmlTitle>Las Minute Offer</MjmlTitle>
+        <MjmlTitle>Nextmail Demo</MjmlTitle>
       </MjmlHead>
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">

@@ -13,7 +13,7 @@ function WithImage(props) {
   return (
     <Mjml>
       <MjmlHead>
-        <MjmlTitle>Las Minute Offer</MjmlTitle>
+        <MjmlTitle>With Image</MjmlTitle>
       </MjmlHead>
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">
