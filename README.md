@@ -152,3 +152,39 @@ The `nextmail dev` script allows you to view a preview of your email template.
 The preview route follows this format: `/preview/:format/:template`
 - `format` can be either `html` or `text`
 - `template` is the file path for your template, e.g. if your file is found at `./emails/demo.js`, the `template` would be `demo`
+
+## Static assets
+Add static assets to the `/static` directory:
+```
+/emails
+  demo.js
+/static
+  /bicycle.jpeg
+```
+
+Then you can reference them in your components:
+```
+  <MjmlImage src="/static/bicycle.jpeg" />
+```
+
+For production, you will need to publish your assets to a known host and use absolute URLs in your components. To do this, add a `nextmail.config.js` file in your project's root:
+```
+const isProd = process.env.NODE_ENV === 'production';
+
+module.exports = {
+  assetPrefix: isProd ? 'https://nextmail-latest.now.sh' : '',
+};
+
+```
+
+`assetPrefix` will then be available in your component's props.
+```
+function WithImage(props) {
+  const { assetPrefix } = props;
+  ...
+    <MjmlImage src={`${assetPrefix}/static/bicycle.jpeg`} />
+  ...
+}
+```
+
+See the [with-image](/examples/latest/emails.with-image) example.
