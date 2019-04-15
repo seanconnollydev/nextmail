@@ -1,4 +1,4 @@
-**Nextmail** is a framework that makes it easy to leverage `React` and `MJML` to construct custom, dynamic email templates.
+**Nextmail** makes it easy to leverage `React` and `MJML` to construct custom, dynamic email templates.
 
 - Declarative, component-based model with [React](https://reactjs.org/)
 - Responsive out of the box with [MJML](https://mjml.io/)
@@ -142,6 +142,7 @@ Custom `React` components allow you to implement reusable elements in your email
 ```
 
 **Q**: Why not just include `Header.js` inside the `emails` directory?
+
 **A**: `Nextmail` needs the ability to distinguish email templates from other components. For example, the preview index lists all available email templates to preview.
 
 ## Previews
