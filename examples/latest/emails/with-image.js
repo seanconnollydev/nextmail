@@ -10,6 +10,7 @@ import {
 } from 'nextmail/mjml-react';
 
 function WithImage(props) {
+  const { assetPrefix } = props;
   return (
     <Mjml>
       <MjmlHead>
@@ -18,7 +19,7 @@ function WithImage(props) {
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
-            <MjmlImage src="/static/bicycle.jpeg" />
+            <MjmlImage src={`${assetPrefix}/static/bicycle.jpeg`} />
           </MjmlColumn>
         </MjmlSection>
       </MjmlBody>

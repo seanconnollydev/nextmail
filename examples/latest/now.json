@@ -7,6 +7,6 @@
     { "src": "./static/**", "use": "@now/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "static/$1" }
+    { "src": "/static/(.*)", "dest": "static/$1" }
   ]
 }

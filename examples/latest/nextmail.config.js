@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  assetPrefix: 'https://nextmail-latest.now.sh/',
+  assetPrefix: isProd ? 'https://nextmail-latest.now.sh' : '',
 };
