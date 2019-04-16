@@ -188,3 +188,6 @@ function WithImage() {
 ```
 
 See the [with-image](/examples/latest/emails.with-image) example.
+
+## Debugging
+To see verbose log output, including captured payload, initial props, etc. when developing: `DEBUG=nextmail npm run dev`
