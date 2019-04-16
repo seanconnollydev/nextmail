@@ -167,22 +167,22 @@ Then you can reference them in your components:
 <MjmlImage src="/static/bicycle.jpeg" />
 ```
 
-For production, you will need to publish your assets to a known host and use absolute URLs in your components. To do this, add a `nextmail.config.js` file in your project's root:
+For production, you will need to publish your assets to a known host and use absolute URLs in your components. One way you can do this is to add a `config.js` file under your `src` directory.
 ```
 const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = {
+export default {
   assetPrefix: isProd ? 'https://nextmail-latest.now.sh' : '',
 };
 
 ```
 
-`assetPrefix` will then be available in your component's props.
+Then reference the `config` in your component.
 ```
-function WithImage(props) {
-  const { assetPrefix } = props;
+import config from '../config';
+function WithImage() {
   ...
-    <MjmlImage src={`${assetPrefix}/static/bicycle.jpeg`} />
+    <MjmlImage src={`${config.assetPrefix}/static/bicycle.jpeg`} />
   ...
 }
 ```
