@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import {
   Mjml,
   MjmlHead,
@@ -12,19 +11,19 @@ import {
 import Header from './src/components/Header';
 
 function Demo(props) {
-  const { user } = props;
+  const { firstName } = props;
 
   return (
     <Mjml>
       <MjmlHead>
-        <MjmlTitle>Nextmail Demo</MjmlTitle>
+        <MjmlTitle>Payload Only Demo</MjmlTitle>
       </MjmlHead>
       <MjmlBody width={500}>
         <MjmlSection fullWidth backgroundColor="#efefef">
           <MjmlColumn>
             <Header />
             <MjmlText align="center">
-              {`Hello ${user.name}`}
+              {`Hello ${firstName}`}
             </MjmlText>
           </MjmlColumn>
         </MjmlSection>
@@ -32,18 +31,5 @@ function Demo(props) {
     </Mjml>
   );
 }
-
-Demo.getInitialProps = async ({ payload }) => {
-  const { userId } = payload;
-  const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId || 1}`);
-  return { user: resp.data };
-};
-
-Demo.getSubject = async ({ payload, props }) => {
-  const { userId } = payload;
-  const { user } = props;
-
-  return `${user.name}(${userId}), read this email!`;
-};
 
 export default Demo;
