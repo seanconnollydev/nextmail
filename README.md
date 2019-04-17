@@ -138,7 +138,7 @@ The preview route follows this format: `/preview/:format/:template`
 
 ### Test payloads with query strings
 If your email template requires payload data, you can add the payload via query string:
-`http://localhost:6100/html/demo?firstName=Lisa` -> { firstName: 'Lisa'}
+`http://localhost:6100/html/demo?firstName=Lisa` -> `{ firstName: 'Lisa'}`
 
 Nested objects and arrays are also supported. See [qs](https://www.npmjs.com/package/qs) for formatting options.
 
