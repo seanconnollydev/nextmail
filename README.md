@@ -150,7 +150,7 @@ module.exports = { ... };
 ```
 
 ### Configuring nodemailer for test sends
-Configure options for `nodemailer.createTransport(...)`. See [Sending Previews](#Sending_Previews).
+Configure options for `nodemailer.createTransport(...)`. See [Sending Previews](#sending-previews).
 
 ```javascript
 // nextmail.config.js
@@ -183,7 +183,7 @@ module.exports = {
 ```
 
 ## Configuring payloads for testing
-Test payloads are used when [Sending Previews](#Sending_Previews) and are also used to dynamically build links in the preview index page for convenience.
+Test payloads are used when [Sending Previews](#sending-previews) and are also used to dynamically build links in the preview index page for convenience.
 
 ```javascript
 // nextmail.config.js
@@ -204,7 +204,7 @@ module.exports = {
 ```
 
 ## Sending Previews
-[Mailtrap](https://mailtrap.io) is an excellent service that helps you capture test emails. Once [configured](#Configuring_nodemailer_for_test_sends), you can add an additional script to your `package.json`: `"send": "nodemailer send"`. Then run one of the following commands.
+[Mailtrap](https://mailtrap.io) is an excellent service that helps you capture test emails. Once [configured](#configuring-nodemailer-for-test_sends), you can add an additional script to your `package.json`: `"send": "nodemailer send"`. Then run one of the following commands.
 ```bash
 # Sends the demo.js email with a default payload
 npm run send demo
