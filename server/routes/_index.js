@@ -54,8 +54,7 @@ const index = {
 };
 
 function renderLinks(email) {
-  const payloads = config.payloads[email];
-  if (!payloads) return '------';
+  const payloads = config.payloads[email] || { default: {} };
 
   /* eslint-disable indent */
   return `
