@@ -1,12 +1,21 @@
 #!/usr/bin/env node
 const { argv } = require('yargs');
 
-const command = argv._[0];
+(async () => {
+  try {
+    const command = argv._[0];
+    const forwardedArgs = argv._.slice(1);
 
-if (command === 'build') {
-  require('../cli/nextmail-build')();
-} else if (command === 'start') {
-  require('../cli/nextmail-start')();
-} else {
-  require('../cli/nextmail-dev')();
-}
+    if (command === 'build') {
+      await require('../cli/nextmail-build')(forwardedArgs);
+    } else if (command === 'start') {
+      await require('../cli/nextmail-start')(forwardedArgs);
+    } else if (command === 'send') {
+      await require('../cli/nextmail-send')(forwardedArgs);
+    } else {
+      await require('../cli/nextmail-dev')(forwardedArgs);
+    }
+  } catch (err) {
+    console.error(err); // eslint-disable-line no-console
+  }
+})();

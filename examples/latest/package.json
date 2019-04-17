@@ -5,6 +5,7 @@
     "build": "nextmail build",
     "dev": "nextmail dev",
     "gen": "node index.js",
+    "send": "nextmail send",
     "start": "NODE_ENV=production nextmail start"
   },
   "license": "MIT",

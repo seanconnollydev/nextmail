@@ -35,7 +35,7 @@ function InitialProps(props) {
 
 InitialProps.getInitialProps = async ({ payload }) => {
   const { userId } = payload;
-  const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId || 1}`);
+  const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
   return { user: resp.data };
 };
 

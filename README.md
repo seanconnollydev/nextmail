@@ -77,23 +77,6 @@ An `Object` with the following properties:
 - **text** (string): The converted text of the email. `nextmail` uses [html-to-text](https://www.npmjs.com/package/html-to-text) for this conversion.
 - **subject** (string): The fully rendered subject line.
 
-#### Exporting `nextmail` templates as a package
-
-You can build and export email templates as an `npm` package. In order to do this, you need to tell `nextmail` where to find the build templates with the `rootDirectory` option.
-```javascript
-const path = require('path');
-const { Renderer } = require('nextmail');
-
-const renderer = new Renderer({ rootDirectory: path.resolve(__dirname) });
-
-async function renderEmail(...args) {
-  // You can also implement custom post-processing logic here too.
-  return renderer.renderEmail(...args);
-}
-
-module.exports = { renderEmail };
-```
-
 ## Fetch asynchronous data with `getInitialProps`
 
 In similar fashion to [Next.js](https://nextjs.org), you can implement `getInitialProps` to asynchronously fetch data at render time.
@@ -153,6 +136,83 @@ The preview route follows this format: `/preview/:format/:template`
 - `format` can be either `html` or `text`
 - `template` is the file path for your template, e.g. if your file is found at `./emails/demo.js`, the `template` would be `demo`
 
+### Test payloads with query strings
+If your email template requires payload data, you can add the payload via query string:
+`http://localhost:6100/html/demo?firstName=Lisa` -> `{ firstName: 'Lisa'}`
+
+Nested objects and arrays are also supported. See [qs](https://www.npmjs.com/package/qs) for formatting options.
+
+## Configuration
+You can configure `Nextmail` by adding a `nextmail.config.js` file to the root of your project directory and exporting a configuration object.
+```javascript
+// nextmail.config.js
+module.exports = { ... };
+```
+
+### Configuring nodemailer for test sends
+Configure options for `nodemailer.createTransport(...)`. See [Sending Previews](#sending-previews).
+
+```javascript
+// nextmail.config.js
+module.exports = {
+  send: {
+    smtpConfig: {
+      host: 'smtp.mailtrap.io',
+      port: 2525,
+      auth: {
+        user: '****',
+        pass: '****',
+      },
+    },
+  }
+};
+```
+## Configuring mailOptions for test sends
+Override the `mailOptions` sent to nodemailer's `transport.sendMail(...)`
+
+```javascript
+// nextmail.config.js
+module.exports = {
+  send: {
+    mailOptions: {
+      from: 'from@example.com',
+      to: 'to@example.com',
+    },
+  }
+};
+```
+
+## Configuring payloads for testing
+Test payloads are used when [Sending Previews](#sending-previews) and are also used to dynamically build links in the preview index page for convenience.
+
+```javascript
+// nextmail.config.js
+
+// This configures 2 test payloads for the "demo" email
+module.exports = {
+  payloads: {
+    demo: {
+      default: {
+        userId: 1,
+      },
+      user2: {
+        userId: 2,
+      },
+    },
+  },
+};
+```
+
+## Sending Previews
+[Mailtrap](https://mailtrap.io) is an excellent service that helps you capture test emails. Once [configured](#configuring-nodemailer-for-test-sends), you can add an additional script to your `package.json`: `"send": "nodemailer send"`. Then run one of the following commands.
+```bash
+# Sends the demo.js email with a default payload
+npm run send demo
+
+# Sends the demo.js email with the named "user2" payload
+npm run send demo user2
+```
+
 ## Static assets
 Add static assets to the `/static` directory:
 ```
@@ -188,6 +248,23 @@ function WithImage() {
 ```
 
 See the [with-image](/examples/latest/emails.with-image) example.
+
+#### Exporting `nextmail` templates as a package
+
+You can build and export email templates as an `npm` package. In order to do this, you need to tell `nextmail` where to find the build templates with the `rootDirectory` option.
+```javascript
+const path = require('path');
+const { Renderer } = require('nextmail');
+
+const renderer = new Renderer({ rootDirectory: path.resolve(__dirname) });
+
+async function renderEmail(...args) {
+  // You can also implement custom post-processing logic here too.
+  return renderer.renderEmail(...args);
+}
+
+module.exports = { renderEmail };
+```
 
 ## Debugging
 To see verbose log output, including captured payload, initial props, etc. when developing: `DEBUG=nextmail npm run dev`

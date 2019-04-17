@@ -1,5 +1,9 @@
+const qs = require('qs');
 const { html } = require('common-tags');
+const { getConfig } = require('../../lib/config');
 const getEmails = require('../../lib/getEmails');
+
+const config = getConfig();
 
 const index = {
   method: 'get',
@@ -34,15 +38,10 @@ const index = {
           </style>
         </head>
         <body>
-          <h1>Nextmail</h1>
           ${emails.map(email => `
             <div class="email">
-              <span>
-                <a href="/preview/html/${email}">${email}</a>
-              </span>
-              <span>
-                (<a href="/preview/text/${email}">text</a>)
-              </span>
+              <h4>${email}</h4>
+              ${renderLinks(email)}
             </div>
           `)}
         </body>
@@ -53,5 +52,31 @@ const index = {
     res.end();
   },
 };
+
+function renderLinks(email) {
+  const payloads = config.payloads[email];
+  if (!payloads) return '------';
+
+  /* eslint-disable indent */
+  return `
+    <ul>
+      ${Object.keys(payloads).map((key) => {
+        const payload = payloads[key];
+        const query = qs.stringify(payload);
+        return `
+          <li>
+            <span>
+              <a href="/preview/html/${email}?${query}">${key}</a>
+            </span>
+            <span>
+              (<a href="/preview/text/${email}?${query}">text</a>)
+            </span>
+          </li>
+        `;
+      })}
+    </ul>
+  `;
+  /* eslint-disable indent */
+}
 
 module.exports = index;
