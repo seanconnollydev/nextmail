@@ -204,7 +204,7 @@ module.exports = {
 ```
 
 ## Sending Previews
-[Mailtrap](https://mailtrap.io) is an excellent service that helps you capture test emails. Once [configured](#configuring-nodemailer-for-test_sends), you can add an additional script to your `package.json`: `"send": "nodemailer send"`. Then run one of the following commands.
+[Mailtrap](https://mailtrap.io) is an excellent service that helps you capture test emails. Once [configured](#configuring-nodemailer-for-test-sends), you can add an additional script to your `package.json`: `"send": "nodemailer send"`. Then run one of the following commands.
 ```bash
 # Sends the demo.js email with a default payload
 npm run send demo
