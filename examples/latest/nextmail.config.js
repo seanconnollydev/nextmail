@@ -15,4 +15,14 @@ module.exports = {
       to: 'to@example.com',
     },
   },
+  payloads: {
+    'initial-props': {
+      default: {
+        userId: 1,
+      },
+      user2: {
+        userId: 2,
+      },
+    },
+  },
 };
