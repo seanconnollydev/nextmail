@@ -247,7 +247,7 @@ function WithImage() {
 }
 ```
 
-See the [with-image](/examples/latest/emails.with-image) example.
+See the [with-image](/examples/latest/emails/with-image.js) example.
 
 #### Exporting `nextmail` templates as a package
 
