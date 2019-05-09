@@ -167,7 +167,7 @@ module.exports = {
   }
 };
 ```
-## Configuring mailOptions for test sends
+### Configuring mailOptions for test sends
 Override the `mailOptions` sent to nodemailer's `transport.sendMail(...)`
 
 ```javascript
@@ -182,7 +182,7 @@ module.exports = {
 };
 ```
 
-## Configuring payloads for testing
+### Configuring payloads for testing
 Test payloads are used when [Sending Previews](#sending-previews) and are also used to dynamically build links in the preview index page for convenience.
 
 ```javascript
