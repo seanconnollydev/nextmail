@@ -64,7 +64,7 @@ and then just run `npm run dev` and go to `http://localhost:6100` to view a prev
 Generate email data with a single function call.
 ```javascript
 const renderer = new Renderer();
-const { html, text, subject } = renderEmail('demo', {});
+const { html, text, subject } = await renderEmail('demo', {});
 ```
 
 **Arguments**
