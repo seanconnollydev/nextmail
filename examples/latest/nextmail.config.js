@@ -24,5 +24,10 @@ module.exports = {
         userId: 2,
       },
     },
+    'payload-only': {
+      default: {
+        firstName: 'John',
+      },
+    },
   },
 };

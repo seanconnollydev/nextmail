@@ -32,7 +32,7 @@
     "debug": "4.1.1",
     "decache": "4.5.1",
     "html-to-text": "5.1.1",
-    "mjml": "4.4.0-beta.2",
+    "mjml": "4.6.2",
     "mjml-react": "1.0.52",
     "nodemailer": "6.1.0",
     "qs": "6.7.0",
