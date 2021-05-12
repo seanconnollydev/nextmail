@@ -34,7 +34,7 @@
     "html-to-text": "5.1.1",
     "mjml": "4.6.2",
     "mjml-react": "1.0.52",
-    "nodemailer": "6.1.0",
+    "nodemailer": "6.4.16",
     "qs": "6.7.0",
     "require-context": "1.1.0",
     "route-parser": "0.0.5",
