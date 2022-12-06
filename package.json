@@ -35,7 +35,7 @@
     "mjml": "4.6.2",
     "mjml-react": "1.0.52",
     "nodemailer": "6.1.0",
-    "qs": "6.7.0",
+    "qs": "6.7.3",
     "require-context": "1.1.0",
     "route-parser": "0.0.5",
     "yargs": "13.2.2"
